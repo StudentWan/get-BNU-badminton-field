@@ -12,8 +12,6 @@
 
 <pre>“请自己填写”</pre>
 
-为你自己的信息。
-
 ### 使用
 
 <pre>node index.js</pre>
