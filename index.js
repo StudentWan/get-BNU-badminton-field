@@ -55,20 +55,8 @@ request.get('http://172.16.213.7/')
                 request.get('http://172.16.213.7/gymbook/gymBookAction.do?ms=viewGymBook&gymnasium_id=2&item_id=5326&time_date=' + sunday + '&userType=&viewType=m')
                   .set('Cookie', gymCookie)
                   .end(function(err, res) {
-                    var totalCost = 'bookData.totalCost=20';
-                    var idCard = 'bookData.book_person_zjh=请自己填写';
-                    var personName = 'bookData.book_person_name=请自己填写';
-                    var phoneNumber = 'bookData.book_person_phone=请自己填写';
-                    var bookMode = 'bookData.book_mode=from-phone';
-                    var gymnasium = 'gymnasium_idForCache=2';
-                    var itemId = 'item_idForCache=5326';
-                    var date = 'time_dateForCache=' + sunday;
-                    var userType = 'userTypeNumForCache=1';
-                    var putongRes = 'putongRes=putongRes';
-                    var payWay = 'selectedPayWay=1';
-                    var resource = 'allFieldTime=50451#' + sunday;
 
-                    var formData = totalCost + '&' + idCard + '&' + personName + '&' + phoneNumber + '&' + bookMode + '&' + gymnasium + '&' + itemId + '&' + date + '&' + userType + '&' + putongRes + '&' + payWay + '&' + resource;
+                    var formData = ''; //name=123&phone=456这样的形式
 
                     request.post('http://172.16.213.7/gymbook/gymBookAction.do?ms=saveGymBook')
                       .set('Cookie', gymCookie)
